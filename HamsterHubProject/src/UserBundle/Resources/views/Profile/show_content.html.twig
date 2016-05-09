@@ -1,0 +1,28 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    <h2>Your Informations:</h2>
+        <p>{{ 'profile.show.username'|trans }}: {{ profile.username }}</p>
+        <p>{{ 'profile.show.email'|trans }}: {{ profile.email }}</p>
+        <p>{{ 'Lastname' }}: {{ profile.lastname }}</p>
+        <p>{{ 'Firstname' }}: {{ profile.firstname }}</p>
+
+    <img src="{{ asset(imageUrl) }}" >
+
+    {% if(userLogged == profile.id)  %}
+    <a href="{{ path('fos_user_profile_edit') }}">Edit Profile</a>
+    {% endif %}
+
+    <a href="/">Go Back To Homepage</a>
+</div>
+
+<div>
+    <h2>My Videos:</h2>
+    {% for item in videos %}
+    <h4>{{ item.name }}</h4>
+        <a href="/video/show/{{ item.youtubeId }}"><img src="{{ item.preview }}"></a>
+    {% endfor %}
+</div>
+
+
+

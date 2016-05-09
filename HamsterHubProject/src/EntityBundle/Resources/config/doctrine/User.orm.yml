@@ -1,0 +1,27 @@
+EntityBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
+
+    fields:
+        lastname:
+            type: string
+            length: 255
+        firstname:
+            type: string
+            length: 255
+        imageFile :
+             - File:
+                   maxSize: 6000000
+        imageName :
+            type : string
+            length : 255
+
+

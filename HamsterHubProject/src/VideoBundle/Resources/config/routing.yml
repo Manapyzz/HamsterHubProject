@@ -1,0 +1,7 @@
+video_upload:
+    path:     /upload
+    defaults: { _controller: VideoBundle:Upload:upload }
+
+video_show:
+    path:     /video/show/{video_Id}
+    defaults: { _controller: VideoBundle:Video:show}

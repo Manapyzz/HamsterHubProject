@@ -1,0 +1,36 @@
+EntityBundle\Entity\Video:
+    type: entity
+    table: null
+    repositoryClass: EntityBundle\Repository\VideoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
+
+    manyToOne:
+        user:
+            targetEntity: EntityBundle\Entity\User
+            inversedBy: user
+            cascade: ["persist"]
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+
+    fields:
+        name:
+            type: string
+            length: 255
+        link:
+            type: string
+            length: 400
+        description:
+            type: string
+        preview_image:
+            type: string
+            length: 400
+        youtubeId:
+            type: string
+            length: 255;

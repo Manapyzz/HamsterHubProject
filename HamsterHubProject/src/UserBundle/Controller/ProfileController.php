@@ -47,17 +47,22 @@ class ProfileController extends Controller
                 ->findBy(array('user' => $userProfile));
 
             $videos = [];
+            $error = '';
             if(isset($videos)){
                 for ($i = 0; $i < count($userProfileVideos); $i++) {
                     $video['name'] = $userProfileVideos[$i]->getName();
                     $video['preview'] = $userProfileVideos[$i]->getPreviewImage();
                     $video['youtubeId'] = $userProfileVideos[$i]->getYoutubeId();
+                    $video['id'] = $userProfileVideos[$i]->getId();
                     $videos[] = $video;
                 } ;
+                if(count($videos) === 0){
+                    $error = 'This User has no videos';
+                };
             }
 
             return $this->render('FOSUserBundle:Profile:show_content.html.twig', array(
-                'videos' => $videos, 'profile' => $profile, 'userLogged' => $userLoggedIn, 'imageUrl' => $imageUrl
+                'videos' => $videos, 'profile' => $profile, 'userLogged' => $userLoggedIn, 'imageUrl' => $imageUrl, 'errors' => $error
             ));
         }
     }
@@ -89,19 +94,18 @@ class ProfileController extends Controller
         $form->setData($user);
 
         $form->handleRequest($request);
-
+    
         if ($form->isValid()) {
+
             /** @var $userManager \FOS\UserBundle\Model\UserManagerInterface */
             $userManager = $this->get('fos_user.user_manager');
-
             $event = new FormEvent($form, $request);
             $dispatcher->dispatch(FOSUserEvents::PROFILE_EDIT_SUCCESS, $event);
 
             $userManager->updateUser($user);
 
             if (null === $response = $event->getResponse()) {
-                $url = $this->generateUrl('fos_user_profile_show');
-                $response = new RedirectResponse($url);
+                $response = new RedirectResponse('/');
             }
 
             $dispatcher->dispatch(FOSUserEvents::PROFILE_EDIT_COMPLETED, new FilterUserResponseEvent($user, $request, $response));

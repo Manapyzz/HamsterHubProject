@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bridge\Doctrine\Tests\Fixtures\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class UploadController extends Controller
 {
@@ -41,8 +42,16 @@ class UploadController extends Controller
             // maybe set a "flash" success message for the user
         }
 
-        return $this->render(
-            'VideoBundle:Upload:upload.html.twig',
-            array('form' => $form->createView()));
+        $jsonarray = array(
+            'url' => $video->getLink(),
+            'title' => $video->getName(),
+            'description' => $video->getDescription(),
+            'authorName' => $video->getUser()->getUserName(),
+            'preview'=>$video->getPreviewImage()
+
+
+        );
+
+        return new Response(json_encode($jsonarray));
     }
 }

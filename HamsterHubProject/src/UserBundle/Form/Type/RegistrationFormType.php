@@ -11,9 +11,9 @@ class RegistrationFormType extends AbstractType
     {
         $builder->add('lastname');
         $builder->add('firstname');
-        $builder->add('imageFile', 'file', array(
-                'data_class' => null
-            )
+        $builder->add('birthdate', 'date', array(
+            'format' => 'dd MMMM yyyy',
+            'years' => range(\date("Y") - 13, \date("Y") - 100))
         );
     }
 

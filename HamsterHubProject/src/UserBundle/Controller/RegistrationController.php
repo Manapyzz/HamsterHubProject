@@ -43,6 +43,7 @@ class RegistrationController extends Controller
         $user = $userManager->createUser();
         $user->setEnabled(true);
         $user->setImageName('Default Image');
+        $user->setImageFile();
         $event = new GetResponseUserEvent($user, $request);
         $dispatcher->dispatch(FOSUserEvents::REGISTRATION_INITIALIZE, $event);
 

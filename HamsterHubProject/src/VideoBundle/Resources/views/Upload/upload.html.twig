@@ -1,8 +1,22 @@
-You can upload some files here !
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'UserBundle:Base:head.html.twig' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    You can upload some files here !
 
-{{ form_start(form) }}
-   {{ form_row(form.name) }}
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
     {{ form_row(form.link) }}
     {{ form_row(form.description) }}
-<button type="submit">Submit Video!</button>
-{{ form_end(form) }}
+    <button type="submit">Submit Video!</button>
+    {{ form_end(form) }}
+
+    {% include 'UserBundle:Base:footer.html.twig' %}
+</body>
+</html>
+
+

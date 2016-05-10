@@ -5,3 +5,7 @@ video_upload:
 video_show:
     path:     /video/show/{video_Id}
     defaults: { _controller: VideoBundle:Video:show}
+
+video_delete:
+    path:     /delete/{id}
+    defaults: { _controller: VideoBundle:Delete:delete }

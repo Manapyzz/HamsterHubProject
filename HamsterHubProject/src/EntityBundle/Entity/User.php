@@ -61,11 +61,14 @@ class User extends BaseUser
      */
     public function setImageFile(File $image = null)
     {
-        $this->imageFile = $image;
         if ($image) {
+            $this->imageFile = $image;
             // It is required that at least one field changes if you are using doctrine
             // otherwise the event listeners won't be called and the file is lost
             $this->updatedAt = new \DateTime('now');
+        } elseif(!$image) {
+            $image = '/Users/AlexPMac/OneDriveBusiness/Web Developer/Cours/Web development/AllGitHubProjects/HamsterHubProject/HamsterHubProject/app/../web/assets/images//defaultImage.png';
+            $this->imageFile = $image;
         }
         return $this;
     }
@@ -137,5 +140,33 @@ class User extends BaseUser
     public function getFirstname()
     {
         return $this->firstname;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $birthdate;
+
+
+    /**
+     * Set birthdate
+     *
+     * @param \DateTime $birthdate
+     * @return User
+     */
+    public function setBirthdate($birthdate)
+    {
+        $this->birthdate = $birthdate;
+
+        return $this;
+    }
+
+    /**
+     * Get birthdate
+     *
+     * @return \DateTime 
+     */
+    public function getBirthdate()
+    {
+        return $this->birthdate;
     }
 }

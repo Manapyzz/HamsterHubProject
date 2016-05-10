@@ -1,0 +1,24 @@
+@import url(reset.css);
+#menu .menuImage {
+  witdh: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  display: block;
+  padding: 3px 0; }
+#menu li {
+  background: #2F5AA1;
+  width: 33.3%;
+  float: left; }
+#menu li:nth-of-type(2) img {
+  position: relative;
+  top: 3px; }
+
+.videoList {
+  max-width: 200px; }
+  .videoList a {
+    display: block;
+    margin: 0 auto; }
+  .videoList img {
+    width: 130%; }
+
+/*# sourceMappingURL=style.css.map */

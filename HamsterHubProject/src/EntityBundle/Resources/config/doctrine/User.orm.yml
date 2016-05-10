@@ -17,6 +17,8 @@ EntityBundle\Entity\User:
         firstname:
             type: string
             length: 255
+        birthdate:
+           type: date
         imageFile :
              - File:
                    maxSize: 6000000

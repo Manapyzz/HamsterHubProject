@@ -12,7 +12,8 @@ class ProfileFormType extends AbstractType
         $builder->add('lastname');
         $builder->add('firstname');
         $builder->add('imageFile', 'file', array(
-                'data_class' => null
+                'data_class' => null,
+                'required' => false,
             )
         );
     }

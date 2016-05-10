@@ -1,0 +1,23 @@
+#menu {
+  .menuImage {
+    witdh: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    display: block;
+    padding: 3px 0;
+  }
+
+  li {
+    background: #2F5AA1;
+    width: 33.3%;
+    float: left;
+  }
+
+  li:nth-of-type(2) img{
+    position: relative;
+    top: 3px;
+  }
+}
+
+
+

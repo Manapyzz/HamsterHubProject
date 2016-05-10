@@ -16,6 +16,7 @@ class VideoController extends Controller {
         $videoPage['title'] = $video->getName();
         $videoPage['description'] = $video->getDescription();
         $videoPage['authorName'] = $video->getUser()->getUserName();
+        $videoPage['id'] = $video->getUser()->getId();
 
         return $this->render('VideoBundle:Video:show_video.html.twig', array(
             'videoPage' => $videoPage

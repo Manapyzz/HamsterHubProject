@@ -1,28 +1,52 @@
 {% trans_default_domain 'FOSUserBundle' %}
-
+{% include 'UserBundle:Base:head.html.twig' %}
+<body>
+{% include 'UserBundle:Base:header.html.twig' %}
 <div class="fos_user_user_show">
     <h2>Your Informations:</h2>
-        <p>{{ 'profile.show.username'|trans }}: {{ profile.username }}</p>
-        <p>{{ 'profile.show.email'|trans }}: {{ profile.email }}</p>
-        <p>{{ 'Lastname' }}: {{ profile.lastname }}</p>
-        <p>{{ 'Firstname' }}: {{ profile.firstname }}</p>
-
     <img src="{{ asset(imageUrl) }}" >
+    <p>{{ 'profile.show.username'|trans }}: {{ profile.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ profile.email }}</p>
+    <p>{{ 'Lastname' }}: {{ profile.lastname }}</p>
+    <p>{{ 'Firstname' }}: {{ profile.firstname }}</p>
+
+
 
     {% if(userLogged == profile.id)  %}
-    <a href="{{ path('fos_user_profile_edit') }}">Edit Profile</a>
+        <button> <a href="{{ path('fos_user_profile_edit') }}">Edit Profile</a></button>
     {% endif %}
 
-    <a href="/">Go Back To Homepage</a>
 </div>
 
-<div>
+
+<div class="postVideo">
     <h2>My Videos:</h2>
+    <span class="noVideo">{{ errors }}</span>
     {% for item in videos %}
-    <h4>{{ item.name }}</h4>
+        <h4>{{ item.name }}</h4>
         <a href="/video/show/{{ item.youtubeId }}"><img src="{{ item.preview }}"></a>
+        {% if(userLogged == profile.id) %}
+            <form id="delete" method="post">
+                <input type="hidden" name="id" value="{{ item.id }}">
+                <input type="submit" name="delete" value="Supprimer">
+            </form>
+        {% endif %}
     {% endfor %}
 </div>
 
 
 
+{% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+
+    <button class="uploadAVideo"></button>
+    <div class="modalPopUp">
+        <form id="upload" method="post" >
+            <h1>Mettre un post en ligne : </h1><br>
+            <input type="text" name="video[name]" placeholder="Titre" required><br><br>
+            <input type="text" name="video[link]" placeholder="Url" required><br><br>
+            <input type="text" name="video[description]" placeholder="Description" required><br><br>
+            <button type="submit">ok</button>
+            <input type="hidden" id="video__token" name="video[_token]" value="{{ csrf_token('video') }}" >
+        </form>
+    </div>
+{% endif %}

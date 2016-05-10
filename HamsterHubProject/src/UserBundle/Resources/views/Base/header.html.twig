@@ -1,0 +1,15 @@
+<nav id='menu'>
+    <div class="innerMenu">
+        <ul>
+            <li><a href="/"><img class="menuImage" src="{{ asset('assets/images/websiteImages/home-icon.svg') }}"></a></li>
+            {% if app.user == false %}
+                <li><a href="/login"><img class="menuImage" src="{{ asset('assets/images/websiteImages/login.svg') }}"></a></li>
+                <li><a href="/register"><img class="menuImage" src="{{ asset('assets/images/websiteImages/signIn.svg') }}"></a></li>
+            {% endif %}
+            {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
+                <li><a href="/profile/show/{{ app.user.username|lower }}">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>

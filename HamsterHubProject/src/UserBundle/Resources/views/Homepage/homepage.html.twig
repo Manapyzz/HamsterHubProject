@@ -1,16 +1,30 @@
-{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-    Welcome back {{ app.user.username }} ! <br><br>
 
-    <a href="/profile/show/{{ app.user.username|lower }}">See Profile</a><br>
-    <a href="/logout">Logout</a>
-    <div>
-        <h2>Lastest Video:</h2>
-        {% for item in videos %}
-            <a href="/video/show/{{ item.youtubeId }}"><img src="{{ item.preview }}"></a>
-            Posted By <a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a>
-        {% endfor %}
+{% extends 'UserBundle:Base:homepage.html.twig' %}
+
+{% block container %}
+
+
+    <div class="postVideo">
+        {{ errors }}
+            <div class="videoList">
+                <ul>
+                    {% for item in videos %}
+                    <li>
+                        <h4>{{ item.name }}</h4>
+                        <a href="/video/show/{{ item.youtubeId }}">
+                            <img src="{{ item.preview }}">
+                        </a>
+                        <br><br>
+                        Posted By <a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div><br>
+
     </div>
-{% else %}
-    Hello Anonymous ! You're a new to our website ? Please <a href="/register">Sign Up For Free!</a><br>
-    If you already have an account, please <a href="/login">Sign In</a>, we would love to have you back !
-{% endif %}
+
+{% endblock %}
+
+
+
+

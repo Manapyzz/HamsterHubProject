@@ -5,14 +5,14 @@
         </div>
         <div>
             <ul>
-                <li><a href="/"><img class="menuImage" src="{{ asset('assets/images/websiteImages/home-icon.svg') }}"><span class="textMenu">Home</span></a></li>
+                <li><a href="/"><img class="menuImage" src="{{ asset('assets/images/websiteImages/home-icon.svg') }}" alt="home"><span class="textMenu">Home</span></a></li>
                 {% if app.user == false %}
-                    <li><a href="/login"><img class="menuImage" src="{{ asset('assets/images/websiteImages/login.svg') }}"><span class="textMenu">Login</span></a></li>
-                    <li><a href="/register"><img class="menuImage" src="{{ asset('assets/images/websiteImages/signIn.svg') }}"><span class="textMenu">Sign Up</span></a></li>
+                    <li><a href="/login"><img class="menuImage" src="{{ asset('assets/images/websiteImages/login.svg')}}" alt="login"><span class="textMenu">Login</span></a></li>
+                    <li><a href="/register"><img class="menuImage" src="{{ asset('assets/images/websiteImages/signIn.svg') }}" alt="SignUp"><span class="textMenu">Sign Up</span></a></li>
                 {% endif %}
                 {% if ((is_granted("IS_AUTHENTICATED_REMEMBERED")) or (is_granted("IS_AUTHENTICATED_FULLY"))) %}
-                    <li><a href="/profile/show/{{ app.user.username|lower }}">Profile</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/profile/show/{{ app.user.username|lower }}"><img class="menuImage" src="{{ asset('assets/images/websiteImages/profile.svg') }}" alt="Profile"><span class="textMenu">Profile</span></a></li>
+                    <li><a href="/logout"><img class="menuImage" src="{{ asset('assets/images/websiteImages/logout.svg') }}" alt="Logout"><span class="textMenu">Logout</span></a></li>
                 {% endif %}
             </ul>
         </div>

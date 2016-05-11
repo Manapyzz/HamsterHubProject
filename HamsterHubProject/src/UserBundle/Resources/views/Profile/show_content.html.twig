@@ -4,7 +4,7 @@
 {% include 'UserBundle:Base:header.html.twig' %}
 <div class="fos_user_user_show">
     <h2>Your Informations:</h2>
-    <img src="{{ asset(imageUrl) }}" >
+    <img src="{{ asset(imageUrl) }}" alt="{{ profile.username }}" >
     <p>{{ 'profile.show.username'|trans }}: {{ profile.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ profile.email }}</p>
     <p>{{ 'Lastname' }}: {{ profile.lastname }}</p>

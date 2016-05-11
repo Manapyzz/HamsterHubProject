@@ -7,14 +7,12 @@
                 <ul>
                     {% for item in videos %}
                     <li>
-                        <div listContent>
-                            <h4>{{ item.name }}</h4>
-                            <a href="/video/show/{{ item.youtubeId }}">
-                                <img src="{{ item.preview }}">
-                            </a>
-                            <br><br>
-                            Posted By <a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a>
-                        </div>
+                        <h4>{{ item.name }}</h4>
+                        <a href="/video/show/{{ item.youtubeId }}">
+                            <img src="{{ item.preview }}" alt="{{ item.name }}">
+                        </a>
+                        <br><br>
+                        Posted By <a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a>
                     </li>
                     {% endfor %}
                 </ul>

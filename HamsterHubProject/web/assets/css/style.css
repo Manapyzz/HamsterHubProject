@@ -103,18 +103,19 @@ a {
     display: none; }
   #menu li a:hover {
     color: #e76049; } }
-.videoList h4 {
-  font-size: 18px;
-  font-weight: bold; }
-.videoList li {
-  float: left;
+.videoList {
   display: table;
-  width: 100%;
-  text-align: center; }
-.videoList .listContent {
-  display: table-cell; }
-.videoList img {
-  width: 60%; }
+  margin: 0 auto; }
+  .videoList h4 {
+    font-size: 18px;
+    font-weight: bold; }
+  .videoList li {
+    float: left;
+    margin-top: 100px;
+    display: inline;
+    text-align: center; }
+  .videoList img {
+    width: 60%; }
 
 * {
   margin: 0; }

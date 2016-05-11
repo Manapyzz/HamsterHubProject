@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.container {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px;
+}
+.container:after {
+  content: "";
+  display: block;
+}
+
+.stickyFooter, .container:after {
+  height: 50px;
+}
+.stickyFooter {
+  font-size: 13px;
+  background: #2F5AA1;
+  text-align: center;
+  font-family: Roboto, Serif;
+  display: table;
+  width: 100%;
+}
+
+.stickyFooter p {
+  display: table-cell;
+  vertical-align: middle;
+}

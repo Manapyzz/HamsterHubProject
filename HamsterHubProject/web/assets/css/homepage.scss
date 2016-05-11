@@ -1,17 +1,23 @@
 .videoList {
-  max-width: 200px;
 
-  li {
-
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
   }
 
-  a {
-    display: block;
-    margin: 0 auto;
+  li {
+    float: left;
+    display: table;
+    width: 100%;
+    text-align: center;
+  }
+
+  .listContent {
+    display: table-cell;
   }
 
   img {
-    width: 130%;
+    width: 60%;
   }
 }
 

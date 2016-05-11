@@ -1,24 +1,149 @@
-@import url(reset.css);
-#menu .menuImage {
-  witdh: 2rem;
-  height: 2rem;
-  margin: 0 auto;
-  display: block;
-  padding: 3px 0; }
-#menu li {
-  background: #2F5AA1;
-  width: 33.3%;
-  float: left; }
-#menu li:nth-of-type(2) img {
-  position: relative;
-  top: 3px; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-.videoList {
-  max-width: 200px; }
-  .videoList a {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*Alex Add : */
+a {
+  text-decoration: none;
+  color: #000; }
+
+.title {
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  line-height: 38px;
+  font-family: Roboto, Serif;
+  background: #2F5AA1;
+  font-size: 20px; }
+
+.title a {
+  color: #FFF; }
+
+#menu {
+  position: fixed;
+  width: 100%; }
+  #menu .textMenu {
+    display: none; }
+  #menu .menuImage {
+    witdh: 2rem;
+    height: 2rem;
+    margin: 0 auto;
     display: block;
-    margin: 0 auto; }
-  .videoList img {
-    width: 130%; }
+    padding: 3px 0; }
+  #menu li {
+    background: #2F5AA1;
+    width: 33%;
+    float: left;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
+  #menu li:hover {
+    background: #e6e6e6; }
+  #menu li:nth-of-type(2) {
+    width: 34%; }
+  #menu li:nth-of-type(2) img {
+    position: relative;
+    top: 3px; }
+
+@media screen and (min-width: 1025px) {
+  #menu .textMenu {
+    witdh: 2rem;
+    height: 2rem;
+    text-align: center;
+    display: block;
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Roboto, Serif; }
+  #menu .menuImage {
+    display: none; }
+  #menu li a:hover {
+    color: #e76049; } }
+.videoList h4 {
+  font-size: 18px;
+  font-weight: bold; }
+.videoList li {
+  float: left;
+  display: table;
+  width: 100%;
+  text-align: center; }
+.videoList .listContent {
+  display: table-cell; }
+.videoList img {
+  width: 60%; }
+
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.container {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; }
+
+.container:after {
+  content: "";
+  display: block; }
+
+.stickyFooter, .container:after {
+  height: 50px; }
+
+.stickyFooter {
+  font-size: 13px;
+  background: #2F5AA1;
+  text-align: center;
+  font-family: Roboto, Serif;
+  display: table;
+  width: 100%; }
+
+.stickyFooter p {
+  display: table-cell;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 $(function () {
     $('#upload').submit(function () {
-
+        $(".loader").css('display','block');
         var error= true;
         var link = $(this).find(':text[name="video[link]"]').val();
         var isValid = /^(https?\:\/\/)?((www\.)?youtube\.com|youtu\.?be)\/.+$/.test(link);
@@ -18,16 +18,18 @@ $(function () {
                 dataType: 'json',
                 success: function (data) {
                     $('.noVideo').hide();
-
                     $('.postVideo').append('<div class="test">' +
-
-                        '<a href="/video/show/'+ data.url +'"><img src="'+ data.preview +'"></a><br><br>'+
-                        '<span>Posted By <a href="/profile/show/'+data.authorName.toLowerCase() +'">'+data.authorName +'</a></span>'+
+                        '<a href="/video/show/'+ data.url +'"><img src="'+ data.preview +'"></a><br><br>'
                         + '</div>' +  '<form id="delete" method="post">' +
                         '<input type="hidden" name="id" value="{{ item.id }}">' +
                         '<input type="submit" name="delete" value="Supprimer">' +
                         '</form>'
-                   );
+
+                    );
+                    $(".loader").css('display','none');
+                    $('.popUp').css('display','none');
+                    console.log($loader);
+
                 },
                 error : function (error) {
                     console.log('error');

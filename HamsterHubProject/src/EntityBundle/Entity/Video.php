@@ -13,8 +13,7 @@ class Video
      * @var int
      */
     private $id;
-
-
+    
     /**
      * Get id
      *

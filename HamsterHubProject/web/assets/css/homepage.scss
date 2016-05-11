@@ -1,21 +1,54 @@
 .videoList {
-  display: table;
-  margin: 0 auto;
 
   h4 {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
 
-  li {
-    float: left;
-    margin-top: 100px;
-    display: inline;
+  .postVideo {
+    width: 100%;
+    max-width: 640px;
+    display: table;
     text-align: center;
-  }
+    padding-top: 100px;
 
-  img {
-    width: 60%;
+    img {
+      width: 80%;
+      max-width: 512px;
+    }
+
+    .postedUser {
+      text-decoration: underline;
+    }
+
+    .postedUser a:hover {
+      color: #FF7F00;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .videoList {
+    .postVideo {
+      width: 50%;
+      display: inline-block;
+      float: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .videoList {
+    .postVideo {
+      width: 33%;
+      display: inline-block;
+      float: left;
+    }
   }
 }
 

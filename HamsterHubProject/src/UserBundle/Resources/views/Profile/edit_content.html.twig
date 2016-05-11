@@ -1,23 +1,25 @@
 {% trans_default_domain 'FOSUserBundle' %}
+{% extends 'UserBundle:Base:homepage.html.twig' %}
 
-<!DOCTYPE html>
-<html lang="en">
-{% include 'UserBundle:Base:head.html.twig' %}
-<body>
-
-{{ form_start(form) }}
-
-{{ form_widget(form) }}
-<div>
-    <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-</div>
-{{ form_end(form) }}
-
-<a href="/profile/show/{{ app.user.username|lower }}">Return to Profile</a>
-
-{% include 'UserBundle:Base:footer.html.twig' %}
-
-</body>
-</html>
+{% block container %}
 
 
+    <div class="profilBlock">
+        <div class="profilForm">
+
+
+            {{ form_start(form, {'attr': {'class': 'formEdit'}}) }}
+
+            {{ form_widget(form) }}
+            <div>
+                <input type="submit" class="buttonEdit" value="{{ 'profile.edit.submit'|trans }}" />
+            </div>
+            {{ form_end(form) }}
+
+            <a href="/profile/show/{{ app.user.username|lower }}">Return to Profile</a>
+
+        </div>
+
+    </div>
+
+{% endblock %}

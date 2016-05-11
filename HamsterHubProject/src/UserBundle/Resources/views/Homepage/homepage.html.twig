@@ -4,19 +4,29 @@
 {% block container %}
         {{ errors }}
             <div class="videoList">
-                <ul>
                     {% for item in videos %}
-                    <li>
+                    <div class="postVideo">
                         <h4>{{ item.name }}</h4>
                         <a href="/video/show/{{ item.youtubeId }}">
                             <img src="{{ item.preview }}" alt="{{ item.name }}">
                         </a>
                         <br><br>
-                        Posted By <a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a>
-                    </li>
+                        Posted By <span class="postedUser"><a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a></span>
+                    </div>
                     {% endfor %}
-                </ul>
             </div><br>
+            <div class="loginPopUp">
+                <div class="modalPopUp">
+                    <a class="close" href="#">&times;</a>
+                    {% render url('fos_user_security_login') %}
+                </div>
+            </div>
+            <div class="registerPopUp">
+                <div class="modalPopUp">
+                    <a class="closeRegister" href="#">&times;</a>
+                    {% render url('fos_user_registration_register') %}
+                </div>
+            </div>
 {% endblock %}
 
 

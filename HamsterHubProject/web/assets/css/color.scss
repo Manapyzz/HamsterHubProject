@@ -1,0 +1,159 @@
+$PopUpBackgroundColor : white;
+$PopUpBorder: #FF7F00;
+$PopUpTitle : #2F5AA1;
+$filter-backgroundColorOpacity : rgba(0, 0, 0, 0.7);
+
+//Button Modal Form
+$modalButtonGradient : linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+$modalButtonBackground :  #2F5AA1;
+$modalButtonColor :    white;
+
+//Button Modal Form
+$modalButtonHoverGradient : linear-gradient(to bottom, #3cb0fd, #3498db);
+$modalButtonHoverBackground :  #3cb0fd;
+
+//cross Color Modal
+$crossColor : white;
+$crossColorHover : #e76049;
+
+
+//-------------- Upload Modal ------------
+.modalPopUp h1{
+  color : $PopUpTitle;
+}
+
+.popUp{
+  background-color: $filter-backgroundColorOpacity;
+}
+
+
+.videoUploadForm{
+  background-color: $PopUpBackgroundColor;
+  border: 5px solid $PopUpBorder;
+}
+
+.videoUploadForm button{
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: white;
+}
+
+.videoUploadForm button:hover{
+  background-image: $modalButtonHoverGradient;
+  background: $modalButtonHoverBackground;
+}
+
+.editBtn {
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+}
+
+.editBtn a {
+  color: #FFF;
+}
+
+.editBtn a:hover {
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: white;
+}
+
+.uploadBtn {
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: #FFF;
+}
+
+.uploadBtn:hover{
+  background-image: $modalButtonHoverGradient;
+  background: $modalButtonHoverBackground;
+  color: #FFF;
+}
+//----------Login Modal -------------
+.loginPopUp{
+  background-color: $filter-backgroundColorOpacity;
+}
+.loginForm label{
+  color : $PopUpTitle;
+}
+.loginForm{
+  background-color: $PopUpBackgroundColor;
+  border: 5px solid $PopUpBorder;
+}
+.inputLogin {
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: white;
+}
+.inputLogin:hover{
+  background-image: $modalButtonHoverGradient;
+  background: $modalButtonHoverBackground;
+
+}
+//--------Register Modal ------------
+
+.registerPopUp{
+  background-color: $filter-backgroundColorOpacity;
+}
+.registerForm label{
+  color : $PopUpTitle;
+}
+.registerForm{
+  background-color: $PopUpBackgroundColor;
+  border: 5px solid $PopUpBorder;
+}
+.inputRegister {
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: white;
+}
+.inputRegister:hover{
+  background-image: $modalButtonHoverGradient;
+  background: $modalButtonHoverBackground;
+
+}
+
+//------------Cross Modal------------
+
+.close{
+color: #e76049;
+}
+.close:hover{
+
+color : black;
+}
+.closeRegister{
+color: #e76049;
+}
+.closeRegister:hover{
+
+color : black;
+}
+
+//-------- Profil Edit Block -------
+
+.profilForm .buttonEdit{
+  background-image: $modalButtonGradient;
+  background: $modalButtonBackground;
+  color: white;
+
+}
+.profilForm .buttonEdit:hover{
+
+    background-image: $modalButtonHoverGradient;
+    background: $modalButtonHoverBackground;
+
+
+}
+
+.profilForm label{
+  color : $PopUpTitle;
+}
+.profilForm{
+  background-color: $PopUpBackgroundColor;
+  border: 5px solid $PopUpBorder;
+}
+
+.profilForm a:hover {
+  color : #FF7F00;
+}

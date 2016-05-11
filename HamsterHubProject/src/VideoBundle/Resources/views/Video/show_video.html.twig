@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include 'UserBundle:Base:head.html.twig' %}
-<body>
+{% extends 'UserBundle:Base:homepage.html.twig' %}
 
-    <h1>{{ videoPage.title }}</h1>
+    {% block container %}
+        <div class="video center">
+                <h2>{{ videoPage.title }}</h2>
 
-    <iframe width="560" height="315" src="{{ videoPage.url }}" frameborder="0" allowfullscreen></iframe>
+                <iframe src="{{ videoPage.url }}" allowfullscreen></iframe>
 
-    <div>
-        <p>{{ videoPage.description }}</p>
-    </div>
+                <div class="description">
+                    <h3>Description:</h3>
+                    <p>{{ videoPage.description }}</p>
+                </div>
 
-    <div>
-        <p>Posted By <a href="/profile/show/{{ videoPage.authorName|lower }}">{{ videoPage.authorName }}</p></a>
-    </div>
+                <div class="userVideo">
+                    <p>Posted By <span class="author"><a href="/profile/show/{{ videoPage.authorName|lower }}">{{ videoPage.authorName }}</a></span></p>
+                </div>
 
-    {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': videoPage.id } %}
-
-    {% include 'UserBundle:Base:footer.html.twig' %}
-
-</body>
-</html>
-
+                <div class="comment">
+                    {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': videoPage.id } %}
+                </div>
+        </div>
+    {% endblock %}
 
 
 

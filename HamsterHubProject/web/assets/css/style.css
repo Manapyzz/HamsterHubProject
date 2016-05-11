@@ -56,7 +56,7 @@ a {
   text-align: center;
   line-height: 38px;
   font-family: Roboto, Serif;
-  background: #2F5AA1;
+  background: #00416A;
   font-size: 20px; }
 
 .title a {
@@ -74,15 +74,15 @@ a {
     display: block;
     padding: 3px 0; }
   #menu li {
-    background: #2F5AA1;
+    background: #00416A;
     width: 33%;
     float: left;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in; }
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
   #menu li:hover {
-    background: #e6e6e6; }
+    background: #FFF; }
   #menu li:nth-of-type(2) {
     width: 34%; }
   #menu li:nth-of-type(2) img {
@@ -102,21 +102,39 @@ a {
   #menu .menuImage {
     display: none; }
   #menu li a:hover {
-    color: #e76049; } }
-.videoList {
+    color: #FF7F00; } }
+.videoList h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px; }
+.videoList .postVideo {
+  width: 100%;
+  max-width: 640px;
   display: table;
-  margin: 0 auto; }
-  .videoList h4 {
-    font-size: 18px;
-    font-weight: bold; }
-  .videoList li {
-    float: left;
-    margin-top: 100px;
-    display: inline;
-    text-align: center; }
-  .videoList img {
-    width: 60%; }
+  text-align: center;
+  padding-top: 100px; }
+  .videoList .postVideo img {
+    width: 80%;
+    max-width: 512px; }
+  .videoList .postVideo .postedUser {
+    text-decoration: underline; }
+  .videoList .postVideo .postedUser a:hover {
+    color: #FF7F00;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; }
 
+@media screen and (min-width: 641px) {
+  .videoList .postVideo {
+    width: 50%;
+    display: inline-block;
+    float: left; } }
+@media screen and (min-width: 1025px) {
+  .videoList .postVideo {
+    width: 33%;
+    display: inline-block;
+    float: left; } }
 * {
   margin: 0; }
 
@@ -137,7 +155,7 @@ html, body {
 
 .stickyFooter {
   font-size: 13px;
-  background: #2F5AA1;
+  background: #00416A;
   text-align: center;
   font-family: Roboto, Serif;
   display: table;
@@ -146,5 +164,442 @@ html, body {
 .stickyFooter p {
   display: table-cell;
   vertical-align: middle; }
+
+.bold {
+  font-weight: bold; }
+
+.fos_user_user_show {
+  display: block;
+  text-align: center; }
+  .fos_user_user_show img {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 85px auto 20px auto;
+    display: block; }
+  .fos_user_user_show button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background: #2F5AA1;
+    border: none; }
+
+.postVideo h2 {
+  font-size: 20px;
+  font-family: Roboto, Serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px; }
+.postVideo .error {
+  color: #c0392b; }
+.postVideo img {
+  width: 100%; }
+
+html {
+  font-family: "Roboto", sans-serif; }
+
+.videoUploadForm h1 {
+  font-size: bold;
+  font-weight: bold; }
+
+.videoUploadForm button {
+  font-size: 1.8rem; }
+
+.videoUploadForm input {
+  font-size: 100%; }
+
+.inputLogin {
+  font-size: 1.8rem; }
+
+.loginForm input {
+  font-size: 100%; }
+
+.loginForm label {
+  font-weight: bold;
+  font-size: 1.4rem; }
+
+.inputRegister {
+  font-size: 1.8rem; }
+
+.registerForm input {
+  font-size: 100%; }
+
+.registerForm label {
+  font-weight: bold;
+  font-size: 1.4rem; }
+
+@media screen and (min-width: 1025px) {
+  .registerForm {
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    height: 100%; } }
+.close {
+  font-size: 5rem;
+  font-weight: bold; }
+
+.closeRegister {
+  font-size: 5rem;
+  font-weight: bold; }
+
+@media screen and (min-width: 641px) {
+  .profilForm input {
+    font-size: 100%; }
+
+  .profilForm label {
+    font-weight: bold;
+    font-size: 1.4rem; } }
+.uploadBtn {
+  font-size: 1rem; }
+
+.modalPopUp h1 {
+  color: #2F5AA1; }
+
+.popUp {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.videoUploadForm {
+  background-color: white;
+  border: 5px solid #FF7F00; }
+
+.videoUploadForm button {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: white; }
+
+.videoUploadForm button:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #3cb0fd; }
+
+.editBtn {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1; }
+
+.editBtn a {
+  color: #FFF; }
+
+.editBtn a:hover {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: white; }
+
+.uploadBtn {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: #FFF; }
+
+.uploadBtn:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #3cb0fd;
+  color: #FFF; }
+
+.loginPopUp {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.loginForm label {
+  color: #2F5AA1; }
+
+.loginForm {
+  background-color: white;
+  border: 5px solid #FF7F00; }
+
+.inputLogin {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: white; }
+
+.inputLogin:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #3cb0fd; }
+
+.registerPopUp {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.registerForm label {
+  color: #2F5AA1; }
+
+.registerForm {
+  background-color: white;
+  border: 5px solid #FF7F00; }
+
+.inputRegister {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: white; }
+
+.inputRegister:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #3cb0fd; }
+
+.close {
+  color: #e76049; }
+
+.close:hover {
+  color: black; }
+
+.closeRegister {
+  color: #e76049; }
+
+.closeRegister:hover {
+  color: black; }
+
+.profilForm .buttonEdit {
+  background-image: linear-gradient(to bottom, #2F5AA1, #2F5AA1);
+  background: #2F5AA1;
+  color: white; }
+
+.profilForm .buttonEdit:hover {
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #3cb0fd; }
+
+.profilForm label {
+  color: #2F5AA1; }
+
+.profilForm {
+  background-color: white;
+  border: 5px solid #FF7F00; }
+
+.profilForm a:hover {
+  color: #FF7F00; }
+
+.popUp {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  text-align: center; }
+
+.modalPopUp {
+  display: none;
+  vertical-align: middle; }
+
+.videoUploadForm h1 {
+  margin-top: 6%; }
+
+.videoUploadForm {
+  display: none;
+  margin: 0 auto;
+  max-width: 70%;
+  max-height: 50%; }
+
+.videoUploadForm button {
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-top: 2%;
+  margin-bottom: 4%; }
+
+.videoUploadForm button:hover {
+  text-decoration: none; }
+
+@media screen and (min-width: 1025px) {
+  .videoUploadForm {
+    display: none;
+    margin: 0 auto;
+    width: 40%;
+    max-width: 40%;
+    max-height: 50%; } }
+.loginPopUp {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  text-align: center; }
+
+.loginForm input {
+  max-width: 196px; }
+
+.loginForm {
+  display: none;
+  margin: 0 auto;
+  max-width: 450px;
+  max-height: 100%; }
+
+.loginForm .loginFirstLabel {
+  display: block;
+  margin-top: 5%; }
+
+.inputLogin {
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-bottom: 4%; }
+
+.inputLogin:hover {
+  text-decoration: none; }
+
+.registerPopUp {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  text-align: center; }
+
+.registerForm {
+  display: none;
+  margin: 0 auto;
+  max-width: 70%;
+  height: 100%; }
+
+.registerForm label {
+  display: block;
+  margin-bottom: 2%;
+  margin-top: 2%; }
+
+.inputRegister {
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-bottom: 2%;
+  margin-top: 2%; }
+
+.inputRegister:hover {
+  text-decoration: none; }
+
+@media screen and (min-width: 641px) {
+  .registerForm {
+    display: none;
+    margin: 0 auto;
+    max-width: 460px;
+    height: 100%; } }
+@media screen and (min-width: 1025px) {
+  .registerForm {
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    height: 80%; } }
+.close {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: all 200ms;
+  text-decoration: none; }
+
+.closeRegister {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 200ms;
+  text-decoration: none; }
+
+.loader {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.editBtn {
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-top: 30px; }
+
+.uploadBtn {
+  border-radius: 6px;
+  border: none;
+  height: 29px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  margin-bottom: 4%; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.video {
+  margin-top: 100px;
+  display: block;
+  width: 100%; }
+  .video h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .video iframe {
+    width: 100%;
+    height: 200px; }
+  .video .description {
+    margin-top: 20px; }
+  .video .description p {
+    border: 1px solid #000; }
+  .video .userVideo {
+    float: right; }
+  .video .userVideo .author a:hover {
+    text-decoration: underline;
+    color: #FF7F00; }
+  .video .comment {
+    padding: 30px 0; }
+
+@media screen and (min-width: 641px) {
+  .video {
+    margin-top: 150px; }
+    .video iframe {
+      width: 100%;
+      height: 300px; } }
+@media screen and (min-width: 1025px) {
+  .video {
+    margin-top: 130px; }
+    .video iframe {
+      width: 50%;
+      height: 350px;
+      display: block;
+      margin: 0 auto; } }
+.profilBlock {
+  display: table;
+  padding-top: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.profilForm {
+  margin: 0 auto;
+  max-width: 283px;
+  height: 100%; }
+
+@media screen and (min-width: 641px) {
+  .profilForm {
+    margin: 0 auto;
+    max-width: 500px;
+    height: 100%; } }
+.profilBlock label {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.profilBlock .buttonEdit {
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+.profilForm .buttonEdit {
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-bottom: 2%;
+  margin-top: 2%; }
 
 /*# sourceMappingURL=style.css.map */

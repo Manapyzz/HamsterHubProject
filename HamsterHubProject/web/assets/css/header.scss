@@ -4,7 +4,7 @@
   text-align: center;
   line-height: 38px;
   font-family: Roboto, Serif;
-  background: #2F5AA1;
+  background: #00416A;
   font-size: 20px;
 }
 
@@ -30,17 +30,17 @@
   }
 
   li {
-    background: #2F5AA1;
+    background: #00416A;
     width: 33%;
     float: left;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   li:hover {
-    background: #e6e6e6;
+    background: #FFF;
   }
 
   li:nth-of-type(2){
@@ -71,8 +71,7 @@
     }
 
     li a:hover {
-      color: #e76049;
-
+      color: #FF7F00;
     }
   }
 }

@@ -1,0 +1,111 @@
+//Font global du site
+$fontStyle :'Roboto', sans-serif;
+//Cross Size and Weight
+$CrossSize : 5rem;
+$CrossWeight: bold;
+
+//Setting Title in Upload Form Modal
+$modalFormTitleSizeWeight : 2.2rem;
+$modalFormTitleSizeWeight : bold;
+
+//set Size in input upload form modal
+$modalFormInputSize : 100%;
+
+//Set Size in Upload Form Button modal
+$uploadFormButtonSize : 1.8rem;
+$uploadButtonProfilSize : 1rem;
+// set size and title login Form
+$loginFormFieldSize : 1.4rem;
+$loginFormFieldsWeight : bold;
+
+ html{
+  font-family: $fontStyle;
+ }
+
+.videoUploadForm h1 {
+
+ font-size: $modalFormTitleSizeWeight;
+ font-weight: $modalFormTitleSizeWeight;
+}
+
+.videoUploadForm button{
+ font-size: $uploadFormButtonSize;
+}
+//Input upload form Modal
+.videoUploadForm input{
+ font-size: $modalFormInputSize;
+}
+
+//Login Input Size/font
+
+.inputLogin{
+ font-size: $uploadFormButtonSize;
+}
+
+//Input login form Modal
+.loginForm input{
+ font-size: $modalFormInputSize;
+}
+
+.loginForm label {
+font-weight:$loginFormFieldsWeight ;
+ font-size: $loginFormFieldSize;
+}
+
+
+//Register Input Size/font
+
+.inputRegister{
+ font-size: $uploadFormButtonSize;
+}
+
+//Input Register form Modal
+.registerForm input{
+ font-size: $modalFormInputSize;
+}
+
+.registerForm label {
+ font-weight:$loginFormFieldsWeight ;
+ font-size: $loginFormFieldSize;
+}
+
+@media screen and (min-width: 1025px) {
+ .registerForm{
+  display: none;
+  margin: 0 auto ;
+  max-width: 500px;
+  height: 100%;
+ }
+
+}
+
+
+//Cross Setting
+.close{
+ font-size: $CrossSize;
+ font-weight: bold;
+}
+.closeRegister {
+ font-size: $CrossSize;
+ font-weight: bold;
+}
+
+//Profil Edit
+
+
+
+@media screen and (min-width: 641px) {
+ .profilForm input{
+  font-size: $modalFormInputSize;
+ }
+
+ .profilForm label {
+  font-weight:$loginFormFieldsWeight ;
+  font-size: $loginFormFieldSize;
+ }
+
+}
+//Input Register form Modal
+.uploadBtn{
+ font-size: $uploadButtonProfilSize;
+}

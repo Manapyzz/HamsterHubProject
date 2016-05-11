@@ -1,0 +1,44 @@
+.profilBlock{
+  display: table;
+  padding-top: 28px;
+  position: absolute;
+  top : 50%;
+  left:50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.profilForm{
+
+  margin: 0 auto ;
+  max-width: 283px;
+  height: 100%;
+}
+@media screen and (min-width: 641px) {
+  .profilForm{
+    margin: 0 auto ;
+    max-width: 500px;
+    height: 100%;
+  }
+
+}
+
+.profilBlock label{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.profilBlock .buttonEdit{
+  margin-bottom: 10px ;
+  margin-top: 10px;
+}
+
+.profilForm .buttonEdit{
+  border-radius: 6px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}

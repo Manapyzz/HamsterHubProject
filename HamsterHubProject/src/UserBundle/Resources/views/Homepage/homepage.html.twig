@@ -2,7 +2,6 @@
 {% extends 'UserBundle:Base:homepage.html.twig' %}
 
 {% block container %}
-        {{ errors }}
             <div class="videoList">
                     {% for item in videos %}
                     <div class="postVideo">
@@ -14,6 +13,7 @@
                         Posted By <span class="postedUser"><a href="/profile/show/{{ item.username|lower }}">{{ item.username }}</a></span>
                     </div>
                     {% endfor %}
+                {{ errors }}
             </div><br>
             <div class="loginPopUp">
                 <div class="modalPopUp">

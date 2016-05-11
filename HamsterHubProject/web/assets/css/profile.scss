@@ -41,3 +41,21 @@
     width: 100%;
   }
 }
+
+@media screen and (min-width: 641px) {
+  .postVideo {
+    text-align: center;
+    img {
+      max-width: 640px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .editBtn {
+    margin-right: 40px;
+    float: right;
+  }
+  
+}
+
